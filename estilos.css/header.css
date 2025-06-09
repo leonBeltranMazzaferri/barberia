@@ -1,0 +1,55 @@
+.direccion {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.header {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  background-image: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+
+.header h1 {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 2.5em;
+}
+
+.header img {
+  width: 100px;
+  vertical-align: middle;
+}
