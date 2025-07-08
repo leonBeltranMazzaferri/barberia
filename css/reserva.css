@@ -1,6 +1,6 @@
 .reserva {
   text-align: center;
-  margin: 40px 0;
+  margin: 145px 0;
 }
 /* ...existing code... */
 .reserva button {
@@ -33,28 +33,96 @@
   margin: 0 auto;
   padding: 20px 5px 80px 5px;
 }
-.dias-lista, .horas-lista, .servicios-lista {
+/* ...existing code... */
+
+/* Scroll horizontal para días y horas */
+.dias-lista, .horas-lista {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 12px 0;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+}
+.dias-lista::-webkit-scrollbar,
+.horas-lista::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Efecto de difuminado en los laterales */
+.dias-lista::before, .dias-lista::after,
+.horas-lista::before, .horas-lista::after {
+  content: "";
+  position: fixed; /* Cambiado de absolute a fixed */
+  top: auto;
+  bottom: auto;
+  height: 60px; /* Ajusta según el alto de tus cajas */
+  width: 28px;
+  pointer-events: none;
+  z-index: 10;
+}
+.dias-lista::before, .horas-lista::before {
+  left: 0;
+  background: linear-gradient(to right, #f7f7f7 80%, transparent);
+}
+.dias-lista::after, .horas-lista::after {
+  right: 0;
+  background: linear-gradient(to left, #f7f7f7 80%, transparent);
+}
+
+/* Cajas de día/hora con sombreado y selección */
+.dia-box, .hora-box {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px #0002;
+  padding: 18px 14px;
+  min-width: 70px;
+  text-align: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+  border: 2px solid transparent;
+  color: #222;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+.dia-box:hover, .hora-box:hover {
+  background: #ffe0b2;
+  transform: scale(1.06);
+}
+.dia-box.selected, .hora-box.selected {
+  background: linear-gradient(90deg, #ffb347 60%, #ff4d4d 100%);
+  color: #fff;
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 4px 16px #ffb34755;
+  font-weight: bold;
+}
+
+/* Servicios siguen en vertical */
+.servicios-lista {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 15px;
 }
-.dia-box, .hora-box, .servicio-box {
+.servicio-box {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px #0001;
   padding: 15px 10px;
-  min-width: 90px;
   text-align: center;
   font-size: 1.1em;
   cursor: pointer;
-  flex: 1 0 40%;
   transition: background 0.2s, transform 0.2s;
 }
-.dia-box:hover, .hora-box:hover, .servicio-box:hover {
+.servicio-box:hover, .servicio-box.selected {
   background: #ffb34722;
   transform: scale(1.04);
 }
+
 #confirmar-turno {
   margin-top: 20px;
   text-align: center;
@@ -72,11 +140,11 @@
 }
 @media (max-width: 500px) {
   .reserva-container {
-    padding: 10px 2px 80px 2px;
+  padding: 10px 2px 80px 2px;
   }
-  .dia-box, .hora-box, .servicio-box {
-    min-width: 40vw;
+  .dia-box, .hora-box {
+    min-width: 60px;
     font-size: 1em;
-    padding: 12px 5px;
+    padding: 12px 6px;
   }
 }
