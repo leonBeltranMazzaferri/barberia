@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THOMAS LADERO - Barbería</title>
+    <link rel="stylesheet" href="../css/average.css">
+  <link rel="stylesheet" href="../css/carrucel.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/reserva.css">
+
+
+</head>
+<body>
+ 
+  <div class="direccion">
+    <a href="https://www.google.com/maps/place/Jhony+Vazquez+salón/@-34.6655275,-58.3628636,21z/data=!4m9!1m2!2m1!1sDirección+Del+Local!3m5!1s0x95a333c68b99f62f:0xe12995b3db92d748!8m2!3d-34.6655167!4d-58.362876!16s%2Fg%2F11ss1fr653?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Dirección del Local</a>
+  </div>
+
+  <header class="header">
+    <h1>Thomas</h1>
+    <img src="../img/XD.jpg" alt="Logo Barbería">
+    <h1>Ladero</h1>
+  </header>
+
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="../img/promo1.jpg" class="slide active" alt="Promoción 1">
+      <img src="../img/promo2.jpg" class="slide" alt="Promoción 2">
+      <img src="../img/promo3.jpg" class="slide" alt="Promoción 3">
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+
+  <!-- ...existing code... -->
+  <div class="reserva">
+    <button onclick="window.location.href='promociones.html'">
+      <span style="font-size:1.3em;vertical-align:middle;">✂️</span>
+      Reservar Turno
+    </button>
+  </div>
+  <!-- ...existing code... -->
+
+
+  <!-- ...existing code... -->
+    <footer class="footer">
+      <div onclick="navigate('inicio')">
+        <span class="footer-icon">🏠</span>
+        <span class="footer-label">Inicio</span>
+      </div>
+      <div onclick="location.href='promociones.html'">
+        <span class="footer-icon">🎟️</span>
+        <span class="footer-label">Promos</span>
+      </div>
+      <div onclick="navigate('catalogo')">
+        <span class="footer-icon">💈</span>
+        <span class="footer-label">Catálogo</span>
+      </div>
+      <div onclick="location.href='usuario.html'">
+        <span class="footer-icon">👤</span>
+        <span class="footer-label">Perfil</span>
+      </div>
+    </footer>
+  <!-- ...existing code... -->
+
+  <script src="../js/carrucel.js"></script>
+</body>
+</html>

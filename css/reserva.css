@@ -1,0 +1,82 @@
+.reserva {
+  text-align: center;
+  margin: 40px 0;
+}
+/* ...existing code... */
+.reserva button {
+  background: linear-gradient(90deg, #ff4d4d 40%, #ffb347 100%);
+  color: #fff;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255,77,77,0.2);
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.reserva button:hover {
+  background: linear-gradient(90deg, #e03e3e 40%, #ffb347 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,77,77,0.3);
+}
+.reserva button:active {
+  background-color: #c32f2f;
+}
+.reserva-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 5px 80px 5px;
+}
+.dias-lista, .horas-lista, .servicios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.dia-box, .hora-box, .servicio-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 15px 10px;
+  min-width: 90px;
+  text-align: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  flex: 1 0 40%;
+  transition: background 0.2s, transform 0.2s;
+}
+.dia-box:hover, .hora-box:hover, .servicio-box:hover {
+  background: #ffb34722;
+  transform: scale(1.04);
+}
+#confirmar-turno {
+  margin-top: 20px;
+  text-align: center;
+}
+#confirmar-turno button {
+  background: #00c86f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .reserva-container {
+    padding: 10px 2px 80px 2px;
+  }
+  .dia-box, .hora-box, .servicio-box {
+    min-width: 40vw;
+    font-size: 1em;
+    padding: 12px 5px;
+  }
+}

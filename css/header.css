@@ -53,3 +53,19 @@
   width: 100px;
   vertical-align: middle;
 }
+/* ...existing code... */
+@media (max-width: 600px) {
+  .header {
+    margin-top: 90px;
+    padding: 5px;
+    font-size: 1em;
+    /* flex-direction: column; */
+    gap: 5px;
+  }
+  .header img {
+    width: 60px;
+  }
+  .header h1 {
+    font-size: 1.5em;
+  }
+}

@@ -21,11 +21,14 @@ function prevSlide() {
   showSlide(index);
 }
 
-document.querySelector('.next').onclick = nextSlide;
-document.querySelector('.prev').onclick = prevSlide;
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+if (nextBtn) nextBtn.onclick = nextSlide;
+if (prevBtn) prevBtn.onclick = prevSlide;
+
 dots.forEach((dot, i) => dot.onclick = () => { index = i; showSlide(i); });
 
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 5000);
 function initCarousel() {
   showSlide(index);
 }

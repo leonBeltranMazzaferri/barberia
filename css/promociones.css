@@ -1,0 +1,65 @@
+
+    body {
+      background: #f7f7f7;
+      margin: 0;
+      padding-bottom: 70px;
+      font-family: Arial, sans-serif;
+    }
+    .promo-list {
+      max-width: 400px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .promo-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    .promo-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+    .promo-date {
+      font-size: 0.95em;
+      color: #888;
+    }
+    .promo-prices {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .promo-original {
+      text-decoration: line-through;
+      color: #bbb;
+      font-size: 1.1em;
+    }
+    .promo-final {
+      color: #27ae60;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .promo-card button {
+      margin-top: 10px;
+      background: linear-gradient(90deg, #ff4d4d 40%, #ffb347 100%);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      width: 100%;
+    }
+    .promo-card button:hover {
+      background: linear-gradient(90deg, #e03e3e 40%, #ffb347 100%);
+      transform: scale(1.03);
+    }
